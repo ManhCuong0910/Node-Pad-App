@@ -1,0 +1,29 @@
+@font-face {
+    font-family: fontGame;
+    src: url('../../public/Pony.ttf');
+}
+.todo{
+    font-family: fontGame;
+    background-image: url('../../public/wallpaperflare.com_wallpaper\ \(5\).jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+background-repeat: no-repeat;
+    color: white;
+    letter-spacing: 4px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.table-task{
+    padding-top: 40px;
+    width:50%;
+    margin:0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+.Pagination{
+    margin-top: 40px;
+    font-size: 16px;
+}
