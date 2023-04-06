@@ -13,7 +13,7 @@ function* getTaskApi() {
     type: DISPLAY_LOADING
   })
 
-  yield delay(1000)
+  yield delay(300)
   let { data } = yield call(toDoListService.getTaskApi);
   yield put({
     type: GET_TASK_API,
@@ -49,6 +49,14 @@ function* getTaskListApiPaginationSaga(page) {
   yield put ({
     type: HIDE_LOADING
   })
+  
+  function * delTaskApi() {
+  
+  }
+  
+  export function* trackActionDelApi() {
+    yield takeLatest("delTask", delTaskApi);
+  }
 }
 export function* actionGetApiPagination() {
   yield takeLatest("getTaskApiPaginationSaga", getTaskListApiPaginationSaga);

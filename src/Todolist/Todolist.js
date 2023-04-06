@@ -60,11 +60,7 @@ function ToDoList() {
   };
   const handleUploadFile = (e) =>{
     setFile(e.target.files[0])
-    // const reader = new FileReader();
-    // const url = reader.readAsDataURL(file);
-  // setUrl(url)
   }
-  console.log(url)
   const renderTodoList = () => {
     return taskList.map((item) => {
       const image = item?.attributes?.image?.data?.attributes?.url

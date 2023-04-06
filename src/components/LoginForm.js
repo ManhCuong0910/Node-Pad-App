@@ -54,7 +54,7 @@ export default function LoginForm({ logIn }) {
           rules={[
             {
               required: true,
-              message: "Please input your username!",
+              message: "Please input your Email",
             },
           ]}
         >
