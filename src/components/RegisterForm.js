@@ -7,20 +7,20 @@ export default function RegisterForm({ logIn }) {
   const navigate = useNavigate();
 
   const onFinishFailed = (errorInfo) => {
+    console.log("Lỗi submit")
   };
   const onFinish = async (values) => {
     try {
-      const res = await axios.post(
-        "https://backoffice.nodemy.vn/api/auth/local/register",
+    await axios.post(
+        "https://backoffice.nodemy.vn/api/auth/local/register/",
         {
           username: values.username,
           email: values.email,
           password: values.password,
         }
       );
-      navigate("/");
     } catch (error) {
-      console.log(error);
+      console.log("Đăng kí thất bại");
     }
   };
   return (
@@ -39,7 +39,7 @@ export default function RegisterForm({ logIn }) {
         initialValues={{}}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        autoComplete="off"
+        // autoComplete="off"
       >
         <Form.Item
           label="Username"

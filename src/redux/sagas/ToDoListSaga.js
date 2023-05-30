@@ -49,15 +49,18 @@ function* getTaskListApiPaginationSaga(page) {
   yield put ({
     type: HIDE_LOADING
   })
-  
-  function * delTaskApi() {
-  
-  }
-  
-  export function* trackActionDelApi() {
-    yield takeLatest("delTask", delTaskApi);
-  }
+    
 }
 export function* actionGetApiPagination() {
   yield takeLatest("getTaskApiPaginationSaga", getTaskListApiPaginationSaga);
 }
+
+function* delTaskApi () {
+
+}
+
+export function*trackDelTaskApi () {
+  yield takeLatest ('delTaskApi',delTaskApi)
+}
+
+

@@ -20,7 +20,7 @@ export default function LoginForm({ logIn }) {
       const { jwt } = res.data;
       Cookies.set("jwt", jwt);
       Cookies.set("login", "true");
-      navigate("/todoapp");
+      navigate("todoapp");
       //   navigate("/")
     } catch (error) {
       Swal.fire({
